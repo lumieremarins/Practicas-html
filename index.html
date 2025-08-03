@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Formulario</title>
+</head>
+<body>
+    <!-- Titulo del formulario -->
+    <h1>Registrate en TiendaNube</h1>
+    <!-- Creacion del formulario "form" -->
+    <form>
+        <div>
+            <!-- Completar con el nombre del usuario -->
+            <!-- El for="password" del <label> coincide siempre con el id="password" del <input> -->
+            <!-- Type="text"(varios) es un atributo que define que tipo de campo es -->
+            <!-- "Placeholder" se usa que el usuario tenga una vision de como completar ese campo -->
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" required placeholder="Lumiere_2025"> 
+        </div>
+        <div>
+            <!-- "Required" se usa para el completado obligatorio del usuario -->
+            <!-- "Minlength se usa para cantidad minima de caracteres y "Maxlength para la maxima" -->
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required minlength="4" maxlength="8">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="example@gmail.com"> 
+        </div>
+        <div>
+             <label for="fecha">Fecha de nacimiento:</label>
+             <input type="date" id="fecha" name="fecha">
+        </div>
+        
+        
+        <div>
+            <!-- "Select" es para crear una lista desplegable y tiene que tener un atributo que es quien de la una identidad al dato, en este caso a la region-->
+             <!-- value="sa" es un atributo que se usa para asignar un valor interno a un campo de formulario, que es el que se envía cuando el usuario hace un envío-->
+            <label for="region">Selecciona region</label>
+            <select name="pais" id="region">
+            <option value="Sa">Sudamerica</option>
+            <option value="Na">Norteamerica</option>
+            <option value="Ea">Europa</option>
+            <option value="As">Asia</option>
+            </select>
+        </div>
+        
+        <!-- Etiqueta de boton para enviar el formulario,
+        Tiene que estar dentro de "form" para que se pueda enviar -->
+        <button type="submit">Enviar</button>
+
+
+    </form>
+</body>
+</html>
